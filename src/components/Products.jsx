@@ -46,10 +46,10 @@ function Products() {
                     return(
                         <>
                             <div className="col-md-3">
-                            <div class="card">
-                                <img src={product.image} class="card-img-top" alt={product.title}/>
+                            <div class="card h-100 text-center p-4" key={product.id}>
+                                <img src={product.image} class="card-img-top" alt={product.title} height='250px'/>
                                 <div class="card-body">
-                                    <h5 class="card-title">{product.title} </h5>
+                                    <h5 class="card-title">{product.title.substring(0,12)} </h5>
                                     <p class="card-text">${product.price}</p>
                                     <a href="/" class="btn btn-primary">Go somewhere</a>
                                 </div>
