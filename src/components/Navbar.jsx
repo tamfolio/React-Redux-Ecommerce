@@ -17,24 +17,24 @@ function Navbar() {
           <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/">Product</NavLink>
+          <NavLink className="nav-link" to="/products">Product</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/">About</NavLink>
+          <NavLink className="nav-link" to="/about">About</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="/">Contact</NavLink>
+          <NavLink className="nav-link" to="/contact">Contact</NavLink>
         </li>
       </ul>
       <div className="buttons">
           <button className="btn">
-              <NavLink to="/" className='btn btn-outline-dark'>
+              <NavLink to="/login" className='btn btn-outline-dark'>
                   <i className="fa fa-sign-in me-1"></i> Login
               </NavLink>
-              <NavLink to="/" className='btn btn-outline-dark ms-2'>
+              <NavLink to="/register" className='btn btn-outline-dark ms-2'>
                   <i className="fa fa-user-plus me-1"></i> Register
               </NavLink>
-              <NavLink to="/" className='btn btn-outline-dark ms-2'>
+              <NavLink to="/cart" className='btn btn-outline-dark ms-2'>
                   <i className="fa fa-shopping-cart me-1"></i> Cart (0)
               </NavLink> 
           </button>
