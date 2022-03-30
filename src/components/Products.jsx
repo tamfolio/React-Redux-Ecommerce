@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Skeleton from 'react-loading-skeleton';
 
 function Products() {
     const [data, setData] = useState([]);
@@ -27,7 +28,18 @@ function Products() {
     const Loading = () => {
         return (
             <>
-                Loading...
+              <div className="col-md-3">
+                <Skeleton height={350}/>    
+              </div>
+              <div className="col-md-3">
+                <Skeleton height={350}/>    
+              </div>
+              <div className="col-md-3">
+                <Skeleton height={350}/>    
+              </div>
+              <div className="col-md-3">
+                <Skeleton height={350}/>    
+              </div>  
             </>
         )
     }
