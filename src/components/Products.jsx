@@ -18,13 +18,15 @@ function Products() {
                 setFilter(await response.json());
                 setLoading(false);
                 console.log(filter)
+                
             }
             return () => {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
                 componentMounted = false;
             }
         }
         getProducts();
-    },[]) ;
+    },[filter,componentMounted]) ;
 
     const Loading = () => {
         return (
@@ -54,11 +56,11 @@ function Products() {
         return (
             <>
                 <div className="buttons d-flex justify-content-center mb-5 pb-5">
-                    <button className="btn btn-outline-dark me-2" onClick={() => setFilter(data)}>All</button>
-                    <button className="btn btn-outline-dark me-2"  onClick={() => filterProduct("men's clothing")}>Men's Clothing</button>
-                    <button className="btn btn-outline-dark me-2" onClick={() => filterProduct("women's clothing")}>Women's Clothing</button>
-                    <button className="btn btn-outline-dark me-2" onClick={() => filterProduct("jewelery")}>Jewelery</button>
-                    <button className="btn btn-outline-dark me-2" onClick={() => filterProduct("electronics")}>Electronics</button>
+                    <button className="btn btn-outline-primary me-2" onClick={() => setFilter(data)}>All</button>
+                    <button className="btn btn-outline-primary me-2"  onClick={() => filterProduct("men's clothing")}>Men's Clothing</button>
+                    <button className="btn btn-outline-primary me-2" onClick={() => filterProduct("women's clothing")}>Women's Clothing</button>
+                    <button className="btn btn-outline-primary me-2" onClick={() => filterProduct("jewelery")}>Jewelery</button>
+                    <button className="btn btn-outline-primary me-2" onClick={() => filterProduct("electronics")}>Electronics</button>
                 </div>
                 {filter.map((product) => {
                     return(
